@@ -1,0 +1,12 @@
+services:
+  resume-analyzer:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      DB_URL: ${DB_URL}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      HF_API_KEY: ${HF_API_KEY}
+      JWT_SECRET: ${JWT_SECRET}
