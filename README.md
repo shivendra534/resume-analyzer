@@ -48,4 +48,14 @@ An AI-powered resume analysis tool built with Spring Boot, PostgreSQL, and LLM i
 
 | Method | Endpoint | Description |
 |--------|----------|--------------|
-| POST |
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Login and receive a JWT |
+| POST | `/api/resumes/upload` | Upload a resume PDF |
+| GET | `/api/resumes/{id}/skills` | AI-extracted skills from a resume |
+| POST | `/api/jobs` | Create a job description |
+| POST | `/api/match/semantic` | Get AI-powered semantic match score |
+| POST | `/api/match/suggestions` | Get AI-generated improvement suggestions |
+
+## What I Learned
+
+Building this project involved solving real integration challenges: handling breaking changes in third-party APIs (Gemini/Hugging Face endpoint migrations), fixing Jackson version conflicts between Spring Boot 4 and legacy libraries, resolving GitHub's secret-scanning push protection after accidentally committing API keys, and configuring CORS for cross-origin frontend-backend communication.
